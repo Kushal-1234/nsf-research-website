@@ -260,6 +260,14 @@ const ProfessorsDetailsPage = ({ professor, onBack }) => {
               </span>
               {professor.description}
             </div>
+            <Button
+              variant="contained"
+              color="primary"
+              className="view-publications-btn"
+              onClick={() => handleOpenModal(professor)}
+            >
+              View Publications
+            </Button>
           </div>
         </div>
       </div>
