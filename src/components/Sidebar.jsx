@@ -14,6 +14,7 @@ import InfoIcon from "@mui/icons-material/Info";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import GroupsIcon from "@mui/icons-material/Groups";
+import HomeRepairServiceIcon from "@mui/icons-material/HomeRepairService";
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   const location = useLocation();
@@ -76,6 +77,15 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             >
               <EventIcon className="icon" />
               {isOpen && <span>Meetings</span>}
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/workshop"
+              className={isActive("/workshop") ? "active" : ""}
+            >
+              <HomeRepairServiceIcon className="icon" />
+              {isOpen && <span>Workshops</span>}
             </Link>
           </li>
           <li>

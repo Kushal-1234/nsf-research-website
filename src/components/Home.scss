@@ -72,10 +72,41 @@
       font-weight: bold;
     }
   }
+  .parallax-section1 {
+    position: relative;
+    // height: 750px;
+    margin: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    .parallax-content {
+      //   background-color: rgba(0, 0, 0, 0.5);
+      background: linear-gradient(to top, #2a435f 0%, #171d25 100%);
+      //   background: url(../assets/images/bg2.jpg);
+      //   background-size: 100% 100%;
+      padding: 50px 40px;
+      border-radius: 10px;
+      max-width: 90%;
+
+      h2 {
+        font-size: 3rem;
+        // margin-bottom: 20px;
+        margin: 0;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
 
   .parallax-section {
     position: relative;
     height: 400px;
+    margin: 2rem 0;
     display: flex;
     align-items: center;
     justify-content: center;
