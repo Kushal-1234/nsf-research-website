@@ -31,6 +31,7 @@ import jordan from "./assets/images/jordan.jpg";
 import justin from "./assets/images/justin.jpeg";
 import UndergradStudents from "./components/UndergradStudents";
 import Workshop from "./components/Workshop";
+import WorkshopPage from "./components/WorkshopPage";
 
 const professorsData = [
   {
@@ -1434,7 +1435,9 @@ function App() {
             {/* <Route path="/members" element={<Members />} /> */}
             <Route path="/meetings" element={<Meetings />} />
             <Route path="/tools" element={<Tools />} />
-            <Route path="/workshop" element={<Workshop />} />
+            {/* <Route path="/workshop" element={<Workshop />} /> */}
+            <Route path="/workshop" element={<WorkshopPage />} />
+
             <Route path="/datasets" element={<Datasets />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />

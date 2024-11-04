@@ -1,0 +1,155 @@
+// $primary-color: #3498db;
+// $secondary-color: #ecf0f1;
+// $text-color: #333;
+
+// .workshop-page {
+//   max-width: 600px;
+//   margin: 0 auto;
+//   padding: 40px;
+//   background-color: $secondary-color;
+//   border-radius: 12px;
+//   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+//   text-align: center;
+
+//   .workshop-header {
+//     margin-bottom: 20px;
+//     h4 {
+//       color: $primary-color;
+//       margin-bottom: 10px;
+//     }
+//   }
+
+//   .upload-section {
+//     margin: 20px 0;
+//     p {
+//       color: $text-color;
+//       margin-top: 10px;
+//     }
+//   }
+
+//   .registration-form {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 20px;
+//     .registration-input {
+//       background-color: white;
+//     }
+//     .submit-button {
+//       background-color: $primary-color;
+//       color: white;
+//       &:hover {
+//         background-color: darken($primary-color, 10%);
+//       }
+//     }
+//   }
+// }
+
+$primary-color: #3498db;
+$secondary-color: #ecf0f1;
+$text-color: #333;
+
+.workshop-page {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  // background-color: $secondary-color;
+  border-radius: 12px;
+  // box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+
+  .workshop-header {
+    text-align: center;
+    margin-bottom: 20px;
+
+    h4 {
+      color: $primary-color;
+    }
+  }
+
+  .workshop-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    .agenda-section {
+      flex: 1;
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+      text-align: left;
+      animation: fadeInLeft 1s ease forwards;
+
+      .agenda-title {
+        font-size: 1.5rem;
+        color: $primary-color;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .agenda-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        .agenda-item {
+          font-size: 1rem;
+          margin-bottom: 15px;
+          padding: 10px;
+          background-color: $secondary-color;
+          border-radius: 8px;
+          color: $text-color;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          opacity: 0;
+          transform: translateX(-20px);
+          animation: fadeInRight 0.5s ease forwards;
+        }
+      }
+    }
+
+    .registration-form {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+      animation: fadeInRight 1s ease forwards;
+      color: $primary-color;
+
+      .submit-button {
+        align-self: center;
+        width: 100%;
+        background-color: $primary-color;
+        color: white;
+
+        &:hover {
+          background-color: darken($primary-color, 10%);
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
