@@ -112,12 +112,12 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
               {isOpen && <span>Contact</span>}
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/about" className={isActive("/about") ? "active" : ""}>
               <InfoIcon className="icon" />
               {isOpen && <span>About</span>}
             </Link>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>

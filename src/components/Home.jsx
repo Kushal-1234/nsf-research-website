@@ -213,40 +213,7 @@ const Home = () => {
             workshops featuring hands-on experiments to teach AI models based on
             experiments derived from this projects research. This project
             expands the AI capacity at NCAT through interdisciplinary AI
-            research, education, and workforce development. The
-            interdisciplinary collaboration and cross-disciplinary AI research
-            spans five use-inspired research thrusts centered on pandemic
-            response patterned after the lessons learned in COVID-19 detection.
-            Specifically, the project will (1) develop robust AI models based on
-            federated knowledge distillation for COVID-19 detection with great
-            generalization ability on new emergent dataset; (2) apply
-            explainable AI (XAI) techniques based on SHAP and LIME to identify
-            and visualize the important features of COVID-19 images that play a
-            significant role in AI models for COVID-19 detection; (3) use the
-            identified features of COVID-19 images from XAI techniques as an
-            input to the proposed generative multi-modal language model to
-            generate COVID-19 images to (4) address biased and fairness issues
-            of AI models based on fairness regularization techniques for
-            COVID-19 detection; and (5) apply differential privacy in federated
-            learning frameworks to build secure AI models to protect the private
-            information of individuals and local clients data. The proposed AI
-            models are targeted for application in a broader range of biomedical
-            image analysis research. The projects educational capacity building
-            focuses on new curricular materials and course modules, including
-            undergraduate/graduate AI senior design classes to increase students
-            understanding and use of AI, private AI, fairness of AI, explainable
-            AI, and general interest in this important, emerging field. Faculty
-            members will conduct and participate in training and workshops will
-            increase the number of faculty members using AI in research, leading
-            to more AI student researchers and increasing integration of AI
-            research and education capacity at NCAT. The ExpandAI Program
-            supports AI-powered education and workforce development,
-            infrastructure and research at Minority Serving Institutions to
-            strengthen and diversify U.S. research and education pathways and
-            provide historically marginalized communities with new opportunities
-            in STEM careers. This award reflects NSF's statutory mission and has
-            been deemed worthy of support through evaluation using the
-            Foundation's intellectual merit and broader impacts review criteria.
+            research, education, and workforce development.
           </p>
         </div>
       </div>
