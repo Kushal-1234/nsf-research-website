@@ -63,11 +63,11 @@ import React, { useEffect } from "react";
 import "./NewsPage.scss";
 
 const news = [
-  `Our paper titled "Efficient Federated Learning with Multi-Teacher Knowledge Distillation for COVID-19 Detection" 
+  `Our paper titled "Efficient Federated Learning with Multi-Teacher Knowledge Distillation for COVID-19 Detection" was
   accepted by 15th ACM International Conference on Bioinformatics, Computational Biology and Health Informatics, ACM-BCB 2024.`,
   `Our paper titled "Federated Learning for COVID-19 Detection: Optimized Ensemble Weighting and Knowledge Distillation" will 
-  appear in the proceeding of International Conference on Bioinformatics and Biomedicine (BIBM), 2024.`,
-  `Our paper titled "Genetic Algorithm-Based Data-Driven Process Selection System for Additive Manufacturing in Industry 4.0", accpeted in 2024.`,
+  appear in the proceeding of IEEE Conference on Bioinformatics and Biomedicine (BIBM), 2024.`,
+  `Our paper titled "Genetic Algorithm-Based Data-Driven Process Selection System for Additive Manufacturing in Industry 4.0", was accpeted by Materials journal, 2024.`,
   `Our paper titled "Explainable Convolutional Neural Network for Phenotype Prediction from Genotype" was accepted by the 
   2024 IEEE International Conference on E-health Networking, Application & Services (HealthCom), 2024.`,
 ];
@@ -96,10 +96,10 @@ const NewsPage = () => {
           </a>,
         ]}
       /> */}
-      <Section
+      {/* <Section
         title="Software"
         items={["Protein Scaffold Filler Software will release soon."]}
-      />
+      /> */}
     </div>
   );
 };

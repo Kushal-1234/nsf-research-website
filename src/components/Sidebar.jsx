@@ -67,7 +67,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
               className={isActive("/undergrad-students") ? "active" : ""}
             >
               <GroupsIcon className="icon" />
-              {isOpen && <span>Team Projects</span>}
+              {isOpen && <span>URM Projects</span>}
             </Link>
           </li>
           <li>

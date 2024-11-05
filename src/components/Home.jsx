@@ -228,35 +228,35 @@ const Home = () => {
         </p>
         <div className="scrollable-cards">
           <div className="card">
-            <h3>Federated Knowledge Distillation</h3>
+            <h3>Robust AI</h3>
             <p>
               Developing AI models for COVID-19 detection with better
               generalization on new datasets.
             </p>
           </div>
           <div className="card">
-            <h3>Explainable AI (XAI)</h3>
+            <h3>XAI AI</h3>
             <p>
               Using SHAP and LIME techniques to identify and visualize important
               features in COVID-19 images.
             </p>
           </div>
           <div className="card">
-            <h3>Fairness Regularization</h3>
+            <h3>Generative AI</h3>
             <p>
               Addressing bias and fairness issues in AI models for COVID-19
               detection.
             </p>
           </div>
           <div className="card">
-            <h3>Generative Multi-Modal Language Model</h3>
+            <h3>Fairness AI</h3>
             <p>
               Generating COVID-19 images to improve AI model performance and
               fairness.
             </p>
           </div>
           <div className="card">
-            <h3>Privacy-Preserving AI</h3>
+            <h3>Private AI</h3>
             <p>
               Applying differential privacy in federated learning frameworks to
               secure sensitive data.
