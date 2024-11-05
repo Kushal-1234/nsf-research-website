@@ -18,7 +18,7 @@ const professors = [
   { name: "Dr. Robert Newman", email: "rhnewman@ncat.edu" },
   { name: "Dr. Madhuri Siddula", email: "msiddula@ncat.edu" },
   { name: "Dr. Kristen Rhinehardt", email: "klrhineh@ncat.edu" },
-  { name: "Dr. Kushal Kalyan", email: "ksurendranath@aggies.ncat.edu" },
+  // { name: "Dr. Kushal Kalyan", email: "ksurendranath@aggies.ncat.edu" },
 ];
 
 const Contact = () => {
