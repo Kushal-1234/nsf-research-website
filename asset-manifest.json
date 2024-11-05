@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/nsf-research-website/static/css/main.f8182726.css",
-    "main.js": "/nsf-research-website/static/js/main.2c250942.js",
+    "main.css": "/nsf-research-website/static/css/main.fc54a668.css",
+    "main.js": "/nsf-research-website/static/js/main.51547d0e.js",
     "static/js/453.c089aa6b.chunk.js": "/nsf-research-website/static/js/453.c089aa6b.chunk.js",
     "static/media/bg1.jpg": "/nsf-research-website/static/media/bg1.7aa91e04e9167d9ddb1f.jpg",
     "static/media/bg2.jpg": "/nsf-research-website/static/media/bg2.3f90836c433606b96e05.jpg",
@@ -21,12 +21,12 @@
     "static/media/PIImage3.png": "/nsf-research-website/static/media/PIImage3.c735e5bf767e1d75c78f.png",
     "static/media/Bg1.png": "/nsf-research-website/static/media/Bg1.f68721a8054b9044ac81.png",
     "index.html": "/nsf-research-website/index.html",
-    "main.f8182726.css.map": "/nsf-research-website/static/css/main.f8182726.css.map",
-    "main.2c250942.js.map": "/nsf-research-website/static/js/main.2c250942.js.map",
+    "main.fc54a668.css.map": "/nsf-research-website/static/css/main.fc54a668.css.map",
+    "main.51547d0e.js.map": "/nsf-research-website/static/js/main.51547d0e.js.map",
     "453.c089aa6b.chunk.js.map": "/nsf-research-website/static/js/453.c089aa6b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f8182726.css",
-    "static/js/main.2c250942.js"
+    "static/css/main.fc54a668.css",
+    "static/js/main.51547d0e.js"
   ]
 }
