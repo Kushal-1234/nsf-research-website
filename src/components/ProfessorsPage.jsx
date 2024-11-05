@@ -30,9 +30,16 @@ const ProfessorsPage = ({ professors, onSelectProfessor }) => {
             />
             <div className="professor-info">
               <h2>{professor.name}</h2>
-              <p>{professor.designation}</p>
+              <h2>
+                <span>(</span>
+                {index === 0 ? "PI" : "Co-PI"}
+                <span>)</span>
+              </h2>
+              {/* <p>{professor.designation}</p> */}
+
               {/* <p style={{ marginTop: "10px" }}>{professor.department}</p> */}
             </div>
+            {/* <p>{index === 0 ? "PI" : "Co-PI"}</p> */}
           </div>
         ))}
       </div>

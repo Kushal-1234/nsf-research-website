@@ -240,13 +240,14 @@ const ProfessorsDetailsPage = ({ professor, onBack }) => {
           <div className="professorsDetailsPage-main__pi__textContainer">
             <div className="professorsDetailsPage-main__pi__textContainer__nameAndDesignationContainer">
               <span className="professorsDetailsPage-main__pi__textContainer__nameAndDesignationContainer__name">
-                {professor.name}
+                {professor.name} (
+                {professor.name?.includes("Qingge") ? "PI" : "Co-PI"})
               </span>
-              <div style={{ marginTop: "1rem" }}>
+              {/* <div style={{ marginTop: "1rem" }}>
                 <span className="professorsDetailsPage-main__pi__textContainer__nameAndDesignationContainer__designation">
                   {professor.designation}
                 </span>
-              </div>
+              </div> */}
             </div>
             <div className="professorsDetailsPage-main__pi__textContainer__commonText">
               {professor.college}
