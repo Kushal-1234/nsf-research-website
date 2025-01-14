@@ -29,7 +29,7 @@ const meetings = [
   {
     title: "Weekly Status Meetings",
     date: "Every Friday's",
-    time: "11:00 AM - 11:30 AM",
+    time: "11:00 AM - 12:00 PM",
     description: "Weekly meeting to discuss project objectives and team roles.",
   },
   // {

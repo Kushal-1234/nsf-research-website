@@ -137,7 +137,8 @@ const Home = () => {
           CAP: Expanding AI at North Carolina A&T State University Through
           Interdisciplinary Research, Education and Workforce Development
         </h1>
-        <p>Award Abstract #2434487</p>
+        <p style={{ paddingBottom: 0 }}>Award #2434487</p>
+        <p>October 2024 - September 2026</p>
       </div>
 
       {/* Carousel Section */}
@@ -244,15 +245,15 @@ const Home = () => {
           <div className="card">
             <h3>Generative AI</h3>
             <p>
-              Addressing bias and fairness issues in AI models for COVID-19
-              detection.
+              Generating COVID-19 images to improve AI model performance and
+              fairness.
             </p>
           </div>
           <div className="card">
             <h3>Fairness AI</h3>
             <p>
-              Generating COVID-19 images to improve AI model performance and
-              fairness.
+              Addressing bias and fairness issues in AI models for COVID-19
+              detection.
             </p>
           </div>
           <div className="card">

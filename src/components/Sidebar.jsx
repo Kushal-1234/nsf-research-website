@@ -85,7 +85,16 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
               className={isActive("/workshop") ? "active" : ""}
             >
               <HomeRepairServiceIcon className="icon" />
-              {isOpen && <span>Workshops</span>}
+              {isOpen && <span>Workshop 1</span>}
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/workshop2"
+              className={isActive("/workshop2") ? "active" : ""}
+            >
+              <HomeRepairServiceIcon className="icon" />
+              {isOpen && <span>Workshop 2</span>}
             </Link>
           </li>
           <li>
@@ -94,13 +103,22 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
               {isOpen && <span>Tools</span>}
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               to="/datasets"
               className={isActive("/datasets") ? "active" : ""}
             >
               <StorageIcon className="icon" />
               {isOpen && <span>Datasets</span>}
+            </Link>
+          </li> */}
+          <li>
+            <Link
+              to="/trainees"
+              className={isActive("/trainees") ? "active" : ""}
+            >
+              <StorageIcon className="icon" />
+              {isOpen && <span>Trainees</span>}
             </Link>
           </li>
           <li>

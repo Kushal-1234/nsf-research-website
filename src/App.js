@@ -32,6 +32,8 @@ import justin from "./assets/images/justin.jpeg";
 import UndergradStudents from "./components/UndergradStudents";
 import Workshop from "./components/Workshop";
 import WorkshopPage from "./components/WorkshopPage";
+import WorkshopPage2 from "./components/WorkshopPage2";
+import Trainees from "./components/Trainees";
 
 const professorsData = [
   {
@@ -1349,7 +1351,7 @@ const undergradStudList = {
       team: "Team 7",
       project: "SHAP",
       faculty_advisors: [
-        { img: PIImage5, name: "Dr. Robert H Newman" },
+        { img: PIImage5, name: "Dr. Kristen Rhinehardt" },
         { img: PIImage, name: "Dr. Letu Qingge" },
         { img: sam, name: "Maxwell Sam" },
       ],
@@ -1437,8 +1439,10 @@ function App() {
             <Route path="/tools" element={<Tools />} />
             {/* <Route path="/workshop" element={<Workshop />} /> */}
             <Route path="/workshop" element={<WorkshopPage />} />
+            <Route path="/workshop2" element={<WorkshopPage2 />} />
 
-            <Route path="/datasets" element={<Datasets />} />
+            {/* <Route path="/datasets" element={<Datasets />} /> */}
+            <Route path="/trainees" element={<Trainees />} />
             <Route path="/contact" element={<Contact />} />
             {/* <Route path="/about" element={<About />} /> */}
           </Routes>
