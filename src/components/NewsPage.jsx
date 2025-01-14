@@ -65,10 +65,10 @@ import "./NewsPage.scss";
 const news = [
   `Our paper titled "A study of bias in gender and racial classification from face images using FaceNet" 
   was accepted at IEEE Symposium Series on Computational Intelligence (IEEE SSCI 2025).`,
-  `Our paper titled "Efficient Federated Learning with Multi-Teacher Knowledge Distillation for COVID-19 Detection" was
-  accepted by 15th ACM International Conference on Bioinformatics, Computational Biology and Health Informatics, ACM-BCB 2024.`,
-  `Our paper titled "Federated Learning for COVID-19 Detection: Optimized Ensemble Weighting and Knowledge Distillation" will 
-  appear in the proceeding of IEEE Conference on Bioinformatics and Biomedicine (BIBM), 2024.`,
+  `Our paper titled "Efficient Federated Learning with Multi-Teacher Knowledge Distillation for COVID-19 Detection" was published by 
+  15th ACM International Conference on Bioinformatics, Computational Biology and Health Informatics, ACM BCB 2024.`,
+  `Our paper titled "Federated Learning for COVID-19 Detection: Optimized Ensemble Weighting and Knowledge Distillation" was published 
+  in the proceeding of IEEE Conference on Bioinformatics and Biomedicine (BIBM), 2024.`,
   // `Our paper titled "Genetic Algorithm-Based Data-Driven Process Selection System for Additive Manufacturing in Industry 4.0", was accpeted by Materials journal, 2024.`,
   `Our paper titled "Genetic Algorithm-Based Data-Driven Process Selection System for Additive Manufacturing in Industry 4.0", was published by Materials journal, 2024.`,
   `Our paper titled "Explainable Convolutional Neural Network for Phenotype Prediction from Genotype" was accepted by the 
