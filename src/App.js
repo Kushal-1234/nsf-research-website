@@ -15,6 +15,7 @@ import "./styles/App.scss";
 import NewsPublicationsSoftware from "./components/NewsPage";
 import ProfessorDetailsPage from "./components/ProfessorsDetailsPage";
 import ProfessorsPage from "./components/ProfessorsPage";
+import bg from "./assets/images/bg3.jpeg";
 import PIImage from "./assets/images/PI_Image.jpg";
 import PIImage2 from "./assets/images/PIImage2.jpeg";
 import PIImage3 from "./assets/images/PIImage3.png";
@@ -34,6 +35,8 @@ import Workshop from "./components/Workshop";
 import WorkshopPage from "./components/WorkshopPage";
 import WorkshopPage2 from "./components/WorkshopPage2";
 import Trainees from "./components/Trainees";
+import Login from "./components/Login";
+import credList from "./assets/Users/Credentials.json";
 
 const professorsData = [
   {
@@ -1380,6 +1383,62 @@ const undergradStudList = {
 function App() {
   // const location = useLocation();
   // const isActive = (path) => location.pathname === path;
+  const loginCredStore = JSON.parse(sessionStorage.getItem("cred"));
+  const [isValidUser, setIsValidUser] = useState(null);
+  const [loginCred, setLoginCred] = useState({
+    email: "",
+    password: "",
+  });
+  const [error, setError] = useState(null);
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setError(null);
+    setLoginCred({ ...loginCred, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    sessionStorage.setItem("cred", JSON.stringify(loginCred));
+    const isValidLogin =
+      credList.filter((item) => {
+        return (
+          item?.username?.toLowerCase() === loginCred?.email?.toLowerCase() &&
+          item?.password === loginCred?.password
+        );
+      })?.length > 0
+        ? true
+        : false;
+    !isValidLogin &&
+      setError(
+        "An error occurred. Please check the entered username and password."
+      );
+    setIsValidUser(isValidLogin);
+  };
+
+  const handleLogout = (e) => {
+    e.preventDefault();
+    sessionStorage.removeItem("cred");
+    setLoginCred({
+      email: "",
+      password: "",
+    });
+    setIsValidUser(null);
+  };
+
+  useEffect(() => {
+    const isValidLogin =
+      credList.filter((item) => {
+        return (
+          item?.username?.toLowerCase() ===
+            loginCredStore?.email?.toLowerCase() &&
+          item?.password === loginCredStore?.password
+        );
+      })?.length > 0
+        ? true
+        : false;
+    setIsValidUser(isValidLogin);
+  }, [JSON.parse(sessionStorage.getItem("cred"))]);
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [selectedProfessor, setSelectedProfessor] = useState(null);
@@ -1400,53 +1459,81 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Sidebar
-          isOpen={isSidebarOpen}
-          toggleSidebar={toggleSidebar}
-          setSelectedProfessor={setSelectedProfessor}
-        />
-        <div
-          className={`content ${
-            isSidebarOpen ? "sidebar-open" : "sidebar-closed"
-          }`}
-        >
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/news" element={<NewsPublicationsSoftware />} />
-            {/* <Route path="/projects/:id" element={<ProjectDetails />} /> */}
-            <Route
-              path="/members"
-              element={
-                selectedProfessor ? (
-                  <ProfessorDetailsPage
-                    professor={selectedProfessor}
-                    onBack={handleBackToProfessors}
-                  />
-                ) : (
-                  <ProfessorsPage
-                    professors={professorsData}
-                    onSelectProfessor={handleSelectProfessor}
-                  />
-                )
-              }
+        {/* {isValidUser === false ? (
+          <div
+            style={{
+              position: "relative",
+              display: "flex",
+              flex: 1,
+              backgroundImage: `url(${bg})`,
+              backgroundSize: "100% 100%",
+              backgroundRepeat: "no-repeat",
+              height: "100vh",
+              justifyContent: "flex-end",
+            }}
+          >
+            <Login
+              loginCred={loginCred}
+              handleChange={handleChange}
+              handleSubmit={handleSubmit}
+              error={error}
             />
-            <Route
-              path="/undergrad-students"
-              element={<UndergradStudents teams={undergradStudList.teams} />}
-            />
-            {/* <Route path="/members" element={<Members />} /> */}
-            <Route path="/meetings" element={<Meetings />} />
-            <Route path="/tools" element={<Tools />} />
-            {/* <Route path="/workshop" element={<Workshop />} /> */}
-            <Route path="/workshop" element={<WorkshopPage />} />
-            <Route path="/workshop2" element={<WorkshopPage2 />} />
+          </div>
+        ) : (
+          isValidUser === true && ( */}
+        <>
+          <Sidebar
+            isOpen={isSidebarOpen}
+            toggleSidebar={toggleSidebar}
+            setSelectedProfessor={setSelectedProfessor}
+            handleLogout={handleLogout}
+          />
+          <div
+            className={`content ${
+              isSidebarOpen ? "sidebar-open" : "sidebar-closed"
+            }`}
+          >
+            <Routes>
+              <Route path="/" element={<Home />} />
 
-            {/* <Route path="/datasets" element={<Datasets />} /> */}
-            <Route path="/trainees" element={<Trainees />} />
-            <Route path="/contact" element={<Contact />} />
-            {/* <Route path="/about" element={<About />} /> */}
-          </Routes>
-        </div>
+              <Route path="/news" element={<NewsPublicationsSoftware />} />
+              {/* <Route path="/projects/:id" element={<ProjectDetails />} /> */}
+              <Route
+                path="/members"
+                element={
+                  selectedProfessor ? (
+                    <ProfessorDetailsPage
+                      professor={selectedProfessor}
+                      onBack={handleBackToProfessors}
+                    />
+                  ) : (
+                    <ProfessorsPage
+                      professors={professorsData}
+                      onSelectProfessor={handleSelectProfessor}
+                    />
+                  )
+                }
+              />
+              <Route
+                path="/undergrad-students"
+                element={<UndergradStudents teams={undergradStudList.teams} />}
+              />
+              {/* <Route path="/members" element={<Members />} /> */}
+              <Route path="/meetings" element={<Meetings />} />
+              <Route path="/tools" element={<Tools />} />
+              {/* <Route path="/workshop" element={<Workshop />} /> */}
+              <Route path="/workshop" element={<WorkshopPage />} />
+              <Route path="/workshop2" element={<WorkshopPage2 />} />
+
+              {/* <Route path="/datasets" element={<Datasets />} /> */}
+              <Route path="/trainees" element={<Trainees />} />
+              <Route path="/contact" element={<Contact />} />
+              {/* <Route path="/about" element={<About />} /> */}
+            </Routes>
+          </div>
+        </>
+        {/* )
+        )} */}
       </div>
     </Router>
   );
